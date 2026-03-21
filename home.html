@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-brn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio MC Donalds</title>
+    <link rel="stylesheet" href="cardapio.css">
+</head>
+<body>
+    <div class="container">
+        <img src="mc.avif" alt="" id="banner" class="banner">
+        <div class="ctn">
+            <button id="botao_banner" class="botao_banner" onclick="resumir()"><img src="carrinho-de-compras.png" alt="" width="75%"></button>
+            <p class="qtd" id="qtd">1</p>
+        </div>
+    </div>
+    <hr>
+    <h1 id="titulo">MC Donalds - Hamburgueres Bovinos</h1>
+    <hr>
+
+    <div id="produtos">
+        <div class="lanches">
+            <img src="Big Mac.png" alt="" width="150px">
+            <p class="nome">Big Mac</p>
+            <p>Dois hambúrgueres, alface americana, queijo cheddar, molho especial, cebola, picles e pão com gergelim</p>
+            <h4>R$ 24,00</h4>
+            <button onclick="pedir(1)" class="botao_pedido">Adicionar</button>
+        </div>
+        <div class="lanches">
+            <img src="Quarterão.png" alt="" width="150px">
+            <p class="nome">Duplo Quarterão</p>
+            <p>Dois hambúrgueres, mostarda, ketchup, cebola, queijo cheddar e pão com gergelim</p>
+            <h4>R$ 34,00</h4>
+            <button onclick="pedir(2)" class="botao_pedido">Adicionar</button>
+        </div>
+        <div class="lanches">
+            <img src="Turbo.png" alt="" width="150px">
+            <p class="nome">Tasty Turbo 3 Carnes</p>
+            <p>Três hambúrgueres, molho tasty, queijo emental, tomate, alface, cebola, pão com gergelim</p>
+            <h4>R$ 43,90</h4>
+            <button onclick="pedir(3)" class="botao_pedido">Adicionar</button>
+        </div>
+    </div>
+    <div id="pop">
+        <div>
+            <h3>Como você quer pegar o seu lanche?</h3>
+            <div>
+                <button class="modo" onclick="modo(1)">Delivery</button>
+                <button class="modo" onclick="modo(2)">Retire na Loja</button>
+            </div>
+        </div>
+        <div id="pedido" class="Pedido">
+            <div id="Resumo_pedido">
+                <p id="resumo">Resumo do pedido</p>
+                <button onclick="fechar()" id="close">x</button>
+            </div>
+            <div id="continuar">
+                <div>
+                    <p>Seus Pedidos Aqui!</p>
+                </div>
+                <p id="pedido-1"></p>
+                <p id="pedido-2"></p>
+                <p id="pedido-3"></p>
+                <div>
+                    <p>SubTotal:</p>
+                    <p id="subtotal">R$ 0.00</p>
+                    <p id="frete">Frete: R$ -</p>
+                </div>
+                <div>
+                    <p>Total:</p>
+                    <p id="total">R$ 0.00</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button id="continue" onclick="continuar()">Continuar</button>
+        </div>
+    </div>
+    <div id="metodo_pagamento">
+        <p>Qual o modo de pagamento?</p>
+        <button id="dim" class="pag" onclick="pag(1)">Dinheiro</button>
+        <button id="deb" class="pag" onclick="pag(2)">Cartão de Débito</button>
+        <button id="cred" class="pag" onclick="pag(3)">Cartão de Crédito</button>
+    </div>
+    
+    <div id="pagamento">
+        <label for="cartao">Cartão</label>
+        <input id="cartao" type="text" inputmode="numeric" pattern="[0-9\s]{13,19}" maxlength="19" placeholder="Ex: 1234 5678 9012 3456" required>
+    </div>
+    <div id="fim">
+        <div id="entrega" class="desc">
+            <p>Endereço para Entrega:</p>
+            <div>
+                <div class="desc">
+                    <label for="cidade">Qual a sua Cidade?</label>
+                    <select id="cidade" name="cidade" required>
+                        <option value="">Selecione uma cidade</option>
+                        <option value="São Paulo">São Paulo</option>
+                        <option value="Campinas">Campinas</option>
+                        <option value="Santos">Santos</option>
+                        <option value="São Bernardo do Campo">São Bernardo do Campo</option>
+                        <option value="Sorocaba">Sorocaba</option>
+                        <option value="Mogi das Cruzes">Mogi das Cruzes</option>
+                        <option value="Osasco">Osasco</option>
+                        <option value="Ribeirão Preto">Ribeirão Preto</option>
+                        <option value="Bauru">Bauru</option>
+                        <option value="Guarulhos">Guarulhos</option>
+                    </select>
+                </div>
+                <div class="desc">
+                    <label for="bairro">Qual o seu Bairro?</label>
+                    <input type="text" id="bairro" placeholder="Ex: Alto do Ipiranga">
+                </div>
+                <div class="desc">
+                    <label for="endereco">Qual a sua Rua?</label>
+                    <input type="text" id="endereco" placeholder="Ex: Rua Jardelina 241">
+                </div>
+            </div>
+        </div>
+        <div>
+            <button id="finalizar" onclick="finalizar()">Finalizar Pedido</button>
+        </div>
+    </div>
+    
+    <script src="cardapio.js"></script>
+</body>
+</html>

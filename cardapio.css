@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0 1%;
+    padding: 0 1%;
+    background-color: bisque;
+}
+hr{
+    border:1px solid black
+}
+#produtos{
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lanches{
+    margin:  2% 3%;
+    padding: 2% 7%;
+    width: 100%;
+    border: 2px solid beige;
+    border-radius: 25%;
+    box-shadow: 4px 4px 20px rgb(192, 158, 116);
+}
+.container{
+    position: relative;
+    width: 100%;
+}
+.banner{
+    width: 100%;
+    display:block
+}
+#botao_banner{
+    position: absolute;
+    top:2%;
+    right:2%;
+    height:15%;
+    width:3.5%;
+    background-color: rgba(224, 224, 216, 0.281);
+    border-radius: 50%;
+    border:2px solid black;
+    box-shadow: 4px 4px 20px rgba(5, 5, 5, 0.808);
+}
+.qtd{
+    position:absolute;
+    top:1%;
+    right:2%;
+    border:1px solid rgba(0, 0, 0, 0.521);
+    background-color: brown;
+    width:.92%;
+    border-radius:45%;
+    color: white;
+    transform: scale(0,9);
+    opacity: 0;
+}
+.qtd.active{
+    transform: scale(1);
+    opacity:1;
+}
+h1{
+    text-align: center;
+    font-size: xxx-large;
+    margin: .5%;
+}
+.botao_pedido{
+    width: 100%;
+    padding: 3%;
+    background-color: brown;
+    color: white;
+    border-radius: 10px;
+    border-color: white;
+}
+.nome{
+    margin: 0 0 5% 0;
+    font-weight: bold;
+}
+h4{
+    margin: 5% 0;
+}
+.modo{
+    padding:.4%;
+    width:10%;
+    margin:1% 1% 1% 0 ;
+    background-color: brown;
+    color: white;
+}
+#Resumo_pedido{
+    position: relative;
+    width:100%;
+}
+#pop{
+    transform: scale(0,9);
+    opacity: 0;
+}
+#pedido{
+    border: 1px solid black;
+    width: 25%;
+}
+#pop.ativo{
+    transform: scale(1);
+    opacity: 1;
+}
+#close{
+    position: absolute;
+    top:1%;
+    right: 1%;
+    border: 0;
+    color: white;
+    background-color: rgba(128, 128, 128, 0);
+}
+#resumo{
+    color: white;
+    text-align: center;
+    padding: 0.1% 1%;
+    background-color: grey;
+}
+#continuar{
+    background-color: rgba(245, 245, 245, 0.5);
+}
+#continue{
+    padding:.3%;
+    margin: .2% 3% 2% 0%;
+    background-color: brown;
+    color: white;
+    border-radius: 5px;
+}
+#metodo_pagamento{
+    transform:scale(0,9);
+    opacity: 0;
+}
+#metodo_pagamento.on{
+    transform:scale(1);
+    opacity: 1;
+}
+.pag{
+    padding:.6%;
+    margin: 2% 3% 2% 0%;
+    background-color: brown;
+    color: white;
+    border-radius: 20px;
+}
+#pagamento{
+    transform:scale(0,9);
+    opacity: 0;
+}
+#pagamento.able{
+    transform:scale(1);
+    opacity: 1;
+}
+#fim{
+    transform:scale(0,9);
+    opacity: 0;
+}
+#fim.open{
+    transform:scale(1);
+    opacity: 1;
+}
+#entrega{
+    margin-top: 2%;
+    margin-bottom: 1.5%;
+    transform: scale(0,9);
+    opacity: 0;
+}
+#entrega.opn{
+    transform: scale(1);
+    opacity: 1;
+}
+.desc{
+    margin-top: 1%;
+}
+#finalizar{
+    padding:1%;
+    margin: 2% 3% 2% 4%;
+    background-color: brown;
+    color: white;
+    border-radius: 20px;
+}
